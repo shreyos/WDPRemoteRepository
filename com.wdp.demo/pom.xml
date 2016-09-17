@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wdp</groupId>
+		<artifactId>com.wdp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../com.wdp/pom.xml</relativePath>
+	</parent>
+	<groupId>com.wdp.demo</groupId>
+	<artifactId>com.wdp.demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wdpDemo</name>
+	<description>WDP Demo</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.wdp.core</groupId>
+			<artifactId>com.wdp.core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>	
+		</dependency>
+		<dependency>
+			<groupId>com.wdp.authentication</groupId>
+			<artifactId>com.wdp.authentication</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>	
+		</dependency>
+		<dependency>
+			<groupId>com.wdp.framework</groupId>
+			<artifactId>com.wdp.framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>	
+		</dependency>
+		<dependency>
+			<groupId>com.wdp.security</groupId>
+			<artifactId>com.wdp.security</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>	
+		</dependency>
+	</dependencies>
+	
+</project>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://java.sun.com/xml/ns/javaee" 
+   xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   id="WebApp_ID" version="3.0">
+   
+	<description>WDP Application</description>
+	<display-name>WDP</display-name>
+	
+	<context-param>
+		<param-name>webappName</param-name>
+		<param-value>WDP</param-value>
+	</context-param>
+	
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<filter>
+		<filter-name>wdpPrepareAndExecuteFilter</filter-name>
+		<filter-class>com.wdp.framework.struts2.dispatcher.filter.WDPPrepareAndExecuteFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>wdpPrepareAndExecuteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ 	
+	<listener id="W001">
+	    <listener-class>
+	    	com.wdp.framework.webapp.startup.listener.WDPFirstStartupListener
+	    </listener-class>
+	</listener>
+	<listener id="W002">
+	    <listener-class>
+	    	com.wdp.framework.webapp.session.listener.LifecycleSessionListener
+	    </listener-class>
+	</listener>
+	<listener id="W100">
+	    <listener-class>
+	    	com.wdp.framework.webapp.startup.listener.WDPLastStartupListener
+	    </listener-class>
+	</listener>
+ 	
+ 	<jsp-config>
+	 	<taglib>
+	       <taglib-uri>/struts-tags</taglib-uri>
+	       <taglib-location>/WEB-INF/taglib/struts-tags.tld</taglib-location>
+	    </taglib>
+    </jsp-config>
+    
+</web-app>

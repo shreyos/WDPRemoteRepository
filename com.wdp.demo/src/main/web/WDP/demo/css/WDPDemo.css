@@ -1,0 +1,34 @@
+.loginBackground{
+	background: url("/WDP/demo/images/grass-background.jpg") no-repeat;
+	background-size: 874px;
+	height: 400px;
+	padding-left: 115px;
+	padding-top: 50px;
+	width: 874px;
+}
+.setWidth{
+	width: 400px;
+	padding : 10px;
+}
+.setPadding{
+	padding : 10px;
+	box-shadow: 2px 2px 4px #003300;
+}
+.loginContainer{
+	float: right;
+}
+#submitForm{
+	margin-left: 80px;
+	width: 190px;
+}
+label{
+	font-weight: bold;
+    color: #003300;
+}
+.green{
+	background: url("/WDP/demo/images/blue-background.jpg") no-repeat;
+	height: 300px;
+}
+.loginMsg{
+	margin-bottom: 50px;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true" />
+	<package name="WDPDemo" extends="struts-default" namespace="/WDP/demo">
+	
+		<action name="welcome" method="executeAction"
+			class="com.wdp.demo.login.action.WelcomeAction">
+			<result name="welcome">/WEB-INF/WDP/demo/login/welcome.jsp</result>
+		</action>
+		
+		<action name="login" method="executeAction"
+			class="com.wdp.demo.login.action.LoginAction">
+			<result name="success">/WEB-INF/WDP/demo/login/success.jsp</result>
+			<result name="error">/WEB-INF/WDP/demo/login/welcome.jsp</result>
+		</action>
+		
+	</package>
+</struts>
