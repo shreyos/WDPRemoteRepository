@@ -21,7 +21,7 @@ public class LifecycleSessionListener implements HttpSessionListener {
 		
 		totalActiveSessions++;
 		
-		System.out.println("LifecycleSessionListener session created, total number of active sesssions in container  = "+totalActiveSessions);
+		System.out.println("LifecycleSessionListener session created, total number of active sesssions in web container  = "+totalActiveSessions);
 		System.out.println("Creating SharedData");
 		
 		HttpSession session = httpSessionEvent.getSession();
