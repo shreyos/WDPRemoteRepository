@@ -8,6 +8,4 @@ public class LoginServiceImpl implements LoginService{
 	public void doLogin() {
 		System.out.println("Calling service method.");
 	}
-
-	
 }
