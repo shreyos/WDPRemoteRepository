@@ -67,6 +67,7 @@
 								<directory>../com.wdp.demo/src/main/app/WEB-INF/</directory>
 								<includes>
 									<include>struts.xml</include>
+									<include>applicationContext.xml</include>
 								</includes>
 							</resource>
 						</resources>

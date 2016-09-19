@@ -1,5 +1,6 @@
 package com.wdp.demo.login.action;
 
+import com.wdp.demo.login.service.LoginService;
 import com.wdp.framework.struts2.action.WDPActionSupport;
 
 public class LoginAction extends WDPActionSupport{
@@ -11,8 +12,10 @@ public class LoginAction extends WDPActionSupport{
 
 	private String username;
 	private String password;
+	private LoginService loginService;
 	@Override
 	public String executeAction() throws Exception {
+		loginService.doLogin();
 		// TODO Auto-generated method stub
 		if(null != this.getUsername() && this.getUsername().equals(this.getPassword())){
 			return "success";
@@ -48,6 +51,20 @@ public class LoginAction extends WDPActionSupport{
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the loginService
+	 */
+	public LoginService getLoginService() {
+		return loginService;
+	}
+
+	/**
+	 * @param loginService the loginService to set
+	 */
+	public void setLoginService(LoginService loginService) {
+		this.loginService = loginService;
 	}
 
 }

@@ -38,6 +38,11 @@
 	    	com.wdp.framework.webapp.session.listener.LifecycleSessionListener
 	    </listener-class>
 	</listener>
+	<listener id="W003">
+	    <listener-class>
+	    	org.springframework.web.context.ContextLoaderListener
+	    </listener-class>
+	</listener>
 	<listener id="W100">
 	    <listener-class>
 	    	com.wdp.framework.webapp.startup.listener.WDPLastStartupListener
