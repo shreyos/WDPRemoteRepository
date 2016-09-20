@@ -38,5 +38,52 @@
 			<type>jar</type>
 		</dependency>
 	</dependencies>
-	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-demo-login-spring</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>../com.wdp.demo/src/main/app/WEB-INF/WDP/config/wdp/spring/</outputDirectory>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>../com.wdp.demo/src/main/app/WEB-INF/WDP/demo/login/config/</directory>
+									<includes>
+										<include>spring-application-context-demo-login.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-demo-login-struts</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>../com.wdp.demo/src/main/app/WEB-INF/WDP/config/wdp/struts/</outputDirectory>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>../com.wdp.demo/src/main/app/WEB-INF/WDP/demo/login/config/</directory>
+									<includes>
+										<include>struts-config-demo-login.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
