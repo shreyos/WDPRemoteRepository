@@ -10,4 +10,48 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>wdpProject</name>
   <description>WDP Project</description>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-demo-app-spring</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>../com.wdp.project/src/main/app/WEB-INF/config/wdp/spring/</outputDirectory>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>../com.wdp.demo/src/main/app/WEB-INF/WDP/config/wdp/spring/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-demo-app-struts</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>../com.wdp.project/src/main/app/WEB-INF/config/wdp/struts/</outputDirectory>
+							<overwrite>true</overwrite>
+							<resources>
+								<resource>
+									<directory>../com.wdp.demo/src/main/app/WEB-INF/WDP/config/wdp/struts/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+  
 </project>

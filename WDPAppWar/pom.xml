@@ -71,6 +71,25 @@
 					</configuration>
 				</execution>
 				<execution>
+					<id>copy-demo-app-config-struts-parent</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${basedir}/target/WDPAppWar-${version}/WEB-INF/config/wdp/struts/</outputDirectory>
+						<overwrite>true</overwrite>
+						<resources>
+							<resource>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/</directory>
+								<includes>
+									<include>struts.xml</include>
+								</includes>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+				<execution>
 					<id>copy-demo-app-config-struts</id>
 					<phase>generate-resources</phase>
 					<goals>

@@ -17,25 +17,25 @@
 			<groupId>com.wdp.core</groupId>
 			<artifactId>com.wdp.core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>	
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>com.wdp.authentication</groupId>
 			<artifactId>com.wdp.authentication</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>	
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>com.wdp.framework</groupId>
 			<artifactId>com.wdp.framework</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>	
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>com.wdp.security</groupId>
 			<artifactId>com.wdp.security</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>	
+			<type>jar</type>
 		</dependency>
 	</dependencies>
 	
