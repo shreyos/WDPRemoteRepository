@@ -10,9 +10,10 @@
 	<modules>
 		<module>../com.wdp.authentication</module>
 		<module>../com.wdp.core</module>
-		<module>../com.wdp.demo</module>
 		<module>../com.wdp.framework</module>
 		<module>../com.wdp.security</module>
+		<module>../com.wdp.demo</module>
+		<module>../com.wdp.project</module>
 		<module>../WDPAppWar</module>
 		<module>../WDPWebWar</module>
 		<module>../WDPEar</module>

@@ -45,10 +45,43 @@
 						<overwrite>true</overwrite>
 						<resources>
 							<resource>
-								<directory>../com.wdp.demo/src/main/app/WEB-INF/</directory>
-								<excludes>
-									<exclude>**/WDP/**</exclude>
-								</excludes>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/</directory>
+								<includes>
+									<include>web.xml</include>
+									<include>index.jsp</include>
+								</includes>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+				<execution>
+					<id>copy-demo-app-config-spring</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${basedir}/target/WDPAppWar-${version}/WEB-INF/config/wdp/spring/</outputDirectory>
+						<overwrite>true</overwrite>
+						<resources>
+							<resource>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/config/wdp/spring/</directory>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+				<execution>
+					<id>copy-demo-app-config-struts</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${basedir}/target/WDPAppWar-${version}/WEB-INF/config/wdp/struts/</outputDirectory>
+						<overwrite>true</overwrite>
+						<resources>
+							<resource>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/config/wdp/struts/</directory>
 							</resource>
 						</resources>
 					</configuration>
@@ -64,11 +97,26 @@
 						<overwrite>true</overwrite>
 						<resources>
 							<resource>
-								<directory>../com.wdp.demo/src/main/app/WEB-INF/</directory>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/</directory>
 								<includes>
 									<include>struts.xml</include>
-									<include>applicationContext.xml</include>
 								</includes>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+				<execution>
+					<id>copy-demo-app-struts-config</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${basedir}/target/WDPAppWar-${version}/WEB-INF/classes/struts-config/</outputDirectory>
+						<overwrite>true</overwrite>
+						<resources>
+							<resource>
+								<directory>../com.wdp.project/src/main/app/WEB-INF/config/wdp/struts/</directory>
 							</resource>
 						</resources>
 					</configuration>

@@ -13,6 +13,10 @@
 		<param-name>webappName</param-name>
 		<param-value>WDP</param-value>
 	</context-param>
+	<context-param>
+   		<param-name>contextConfigLocation</param-name>
+    	<param-value>/WEB-INF/config/wdp/spring/spring-application-context.xml</param-value>
+ 	</context-param>
 	
 	<welcome-file-list>
 		<welcome-file>/WEB-INF/index.jsp</welcome-file>
